@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>module IVLE::RostersAndGroups - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/IVLE/api/rosters_and_groups.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-class_group_sign_up">#class_group_sign_up</a>
+    
+    <li><a href="#method-i-class_group_sign_up_remove">#class_group_sign_up_remove</a>
+    
+    <li><a href="#method-i-class_roster">#class_roster</a>
+    
+    <li><a href="#method-i-group_projects_by_user">#group_projects_by_user</a>
+    
+    <li><a href="#method-i-groups_by_user">#groups_by_user</a>
+    
+    <li><a href="#method-i-groups_by_user_and_module">#groups_by_user_and_module</a>
+    
+    <li><a href="#method-i-guest_roster">#guest_roster</a>
+    
+    <li><a href="#method-i-module_class_group_users">#module_class_group_users</a>
+    
+    <li><a href="#method-i-module_class_groups">#module_class_groups</a>
+    
+    <li><a href="#method-i-module_official_group_users">#module_official_group_users</a>
+    
+    <li><a href="#method-i-project_enrolled_groups">#project_enrolled_groups</a>
+    
+    <li><a href="#method-i-project_group_remove_sign_up">#project_group_remove_sign_up</a>
+    
+    <li><a href="#method-i-project_group_sign_up">#project_group_sign_up</a>
+    
+    <li><a href="#method-i-project_group_users">#project_group_users</a>
+    
+    <li><a href="#method-i-project_self_enrol_groups">#project_self_enrol_groups</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../IVLE.html">IVLE</a>
+  
+    <li><a href="../IVLE/API.html">IVLE::API</a>
+  
+    <li><a href="../IVLE/Announcement.html">IVLE::Announcement</a>
+  
+    <li><a href="../IVLE/Community.html">IVLE::Community</a>
+  
+    <li><a href="../IVLE/Consultation.html">IVLE::Consultation</a>
+  
+    <li><a href="../IVLE/DeltaDatasets.html">IVLE::DeltaDatasets</a>
+  
+    <li><a href="../IVLE/Forum.html">IVLE::Forum</a>
+  
+    <li><a href="../IVLE/Gradebook.html">IVLE::Gradebook</a>
+  
+    <li><a href="../IVLE/IVLEModule.html">IVLE::IVLEModule</a>
+  
+    <li><a href="../IVLE/IVLENews.html">IVLE::IVLENews</a>
+  
+    <li><a href="../IVLE/LibraryEReserves.html">IVLE::LibraryEReserves</a>
+  
+    <li><a href="../IVLE/Login.html">IVLE::Login</a>
+  
+    <li><a href="../IVLE/MyOrganizer.html">IVLE::MyOrganizer</a>
+  
+    <li><a href="../IVLE/OpenWebcastLectures.html">IVLE::OpenWebcastLectures</a>
+  
+    <li><a href="../IVLE/Poll.html">IVLE::Poll</a>
+  
+    <li><a href="../IVLE/Profile.html">IVLE::Profile</a>
+  
+    <li><a href="../IVLE/RostersAndGroups.html">IVLE::RostersAndGroups</a>
+  
+    <li><a href="../IVLE/StudentEvents.html">IVLE::StudentEvents</a>
+  
+    <li><a href="../IVLE/Timetable.html">IVLE::Timetable</a>
+  
+    <li><a href="../IVLE/Webcast.html">IVLE::Webcast</a>
+  
+    <li><a href="../IVLE/Workbin.html">IVLE::Workbin</a>
+  
+    <li><a href="../Fixtures.html">Fixtures</a>
+  
+    <li><a href="../Fixtures/IVLE.html">Fixtures::IVLE</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module IVLE::RostersAndGroups</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-class_group_sign_up" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">class_group_sign_up</span><span
+            class="method-args">(course_id, group_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="class_group_sign_up-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/rosters_and_groups.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">class_group_sign_up</span>(<span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">group_id</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'ClassGroupSignUp_JSON'</span>, <span class="ruby-identifier">courseid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">groupid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">group_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- class_group_sign_up-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- class_group_sign_up-method -->
+
+    
+      <div id="method-i-class_group_sign_up_remove" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">class_group_sign_up_remove</span><span
+            class="method-args">(course_id, group_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="class_group_sign_up_remove-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/rosters_and_groups.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">class_group_sign_up_remove</span>(<span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">group_id</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'ClassGroupSignUpRemove_JSON'</span>, <span class="ruby-identifier">courseid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">groupid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">group_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- class_group_sign_up_remove-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- class_group_sign_up_remove-method -->
+
+    
+      <div id="method-i-class_roster" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">class_roster</span><span
+            class="method-args">(course_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="class_roster-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/rosters_and_groups.rb, line 3</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">class_roster</span>(<span class="ruby-identifier">course_id</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Class_Roster'</span>, <span class="ruby-identifier">courseid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">course_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- class_roster-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- class_roster-method -->
+
+    
+      <div id="method-i-group_projects_by_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">group_projects_by_user</span><span
+            class="method-args">(course_id, include_groups, group_type)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="group_projects_by_user-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/rosters_and_groups.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">group_projects_by_user</span>(<span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">include_groups</span>, <span class="ruby-identifier">group_type</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'GroupProjectsByUser'</span>, <span class="ruby-identifier">courseid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">includegroups</span><span class="ruby-operator">:</span> <span class="ruby-identifier">include_groups</span>, <span class="ruby-identifier">grouptype</span><span class="ruby-operator">:</span> <span class="ruby-identifier">group_type</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- group_projects_by_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- group_projects_by_user-method -->
+
+    
+      <div id="method-i-groups_by_user" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">groups_by_user</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="groups_by_user-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/rosters_and_groups.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">groups_by_user</span>
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'GroupsByUser'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- groups_by_user-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- groups_by_user-method -->
+
+    
+      <div id="method-i-groups_by_user_and_module" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">groups_by_user_and_module</span><span
+            class="method-args">(course_id=nil, acad_year=nil, semester=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="groups_by_user_and_module-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/rosters_and_groups.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">groups_by_user_and_module</span>(<span class="ruby-identifier">course_id</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">acad_year</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">semester</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">course_id</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">acad_year</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">semester</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">nil</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-string">'Missing arguments: acad_year and semester must not be nil if course_id is nil'</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">course_id</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">params</span> = {}
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">params</span> = { <span class="ruby-identifier">courseid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">acadyear</span><span class="ruby-operator">:</span> <span class="ruby-identifier">acad_year</span>, <span class="ruby-identifier">semester</span><span class="ruby-operator">:</span> <span class="ruby-identifier">semester</span> }
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'GroupsByUserAndModule'</span>, <span class="ruby-identifier">params</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- groups_by_user_and_module-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- groups_by_user_and_module-method -->
+
+    
+      <div id="method-i-guest_roster" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">guest_roster</span><span
+            class="method-args">(course_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="guest_roster-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/rosters_and_groups.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">guest_roster</span>(<span class="ruby-identifier">course_id</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Guest_Roster'</span>, <span class="ruby-identifier">courseid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">course_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- guest_roster-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- guest_roster-method -->
+
+    
+      <div id="method-i-module_class_group_users" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">module_class_group_users</span><span
+            class="method-args">(class_group_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="module_class_group_users-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/rosters_and_groups.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">module_class_group_users</span>(<span class="ruby-identifier">class_group_id</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Module_ClassGroups'</span>, <span class="ruby-identifier">classgroupid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">class_group_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- module_class_group_users-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- module_class_group_users-method -->
+
+    
+      <div id="method-i-module_class_groups" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">module_class_groups</span><span
+            class="method-args">(course_id, flag)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="module_class_groups-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/rosters_and_groups.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">module_class_groups</span>(<span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">flag</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Module_ClassGroups'</span>, <span class="ruby-identifier">courseid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">flag</span><span class="ruby-operator">:</span> <span class="ruby-identifier">flag</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- module_class_groups-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- module_class_groups-method -->
+
+    
+      <div id="method-i-module_official_group_users" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">module_official_group_users</span><span
+            class="method-args">(course_id, module_code, group_name, acad_year, semester, group_type)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="module_official_group_users-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/rosters_and_groups.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">module_official_group_users</span>(<span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">module_code</span>, <span class="ruby-identifier">group_name</span>, <span class="ruby-identifier">acad_year</span>, <span class="ruby-identifier">semester</span>, <span class="ruby-identifier">group_type</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Module_OfficialGroupUsers'</span>, {
+    <span class="ruby-identifier">courseid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">course_id</span>,
+    <span class="ruby-identifier">modulecode</span><span class="ruby-operator">:</span> <span class="ruby-identifier">module_code</span>,
+    <span class="ruby-identifier">groupname</span><span class="ruby-operator">:</span> <span class="ruby-identifier">group_name</span>,
+    <span class="ruby-identifier">acadyear</span><span class="ruby-operator">:</span> <span class="ruby-identifier">acad_year</span>,
+    <span class="ruby-identifier">semester</span><span class="ruby-operator">:</span> <span class="ruby-identifier">semester</span>,
+    <span class="ruby-identifier">grouptype</span><span class="ruby-operator">:</span> <span class="ruby-identifier">group_type</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- module_official_group_users-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- module_official_group_users-method -->
+
+    
+      <div id="method-i-project_enrolled_groups" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">project_enrolled_groups</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="project_enrolled_groups-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/rosters_and_groups.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">project_enrolled_groups</span>
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Project_EnrolledGroups'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- project_enrolled_groups-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- project_enrolled_groups-method -->
+
+    
+      <div id="method-i-project_group_remove_sign_up" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">project_group_remove_sign_up</span><span
+            class="method-args">(project_group_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="project_group_remove_sign_up-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/rosters_and_groups.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">project_group_remove_sign_up</span>(<span class="ruby-identifier">project_group_id</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'ProjectGroup_RemoveSignUp_JSON'</span>, <span class="ruby-identifier">projectgroupid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">project_group_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- project_group_remove_sign_up-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- project_group_remove_sign_up-method -->
+
+    
+      <div id="method-i-project_group_sign_up" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">project_group_sign_up</span><span
+            class="method-args">(project_group_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="project_group_sign_up-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/rosters_and_groups.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">project_group_sign_up</span>(<span class="ruby-identifier">project_group_id</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'ProjectGroup_SignUp_JSON'</span>, <span class="ruby-identifier">projectgroupid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">project_group_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- project_group_sign_up-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- project_group_sign_up-method -->
+
+    
+      <div id="method-i-project_group_users" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">project_group_users</span><span
+            class="method-args">(project_group_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="project_group_users-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/rosters_and_groups.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">project_group_users</span>(<span class="ruby-identifier">project_group_id</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'ProjectGroupUsers'</span>, <span class="ruby-identifier">projectgroupid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">project_group_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- project_group_users-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- project_group_users-method -->
+
+    
+      <div id="method-i-project_self_enrol_groups" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">project_self_enrol_groups</span><span
+            class="method-args">(project_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="project_self_enrol_groups-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/rosters_and_groups.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">project_self_enrol_groups</span>(<span class="ruby-identifier">project_id</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Project_SelfEnrolGroups'</span>, <span class="ruby-identifier">projectid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">project_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- project_self_enrol_groups-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- project_self_enrol_groups-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

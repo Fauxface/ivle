@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>class IVLE::API - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/IVLE.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="../Object.html">Object</a>
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><a class="include" href="Login.html">IVLE::Login</a>
+  
+  
+  
+    <li><a class="include" href="IVLEModule.html">IVLE::IVLEModule</a>
+  
+  
+  
+    <li><a class="include" href="Consultation.html">IVLE::Consultation</a>
+  
+  
+  
+    <li><a class="include" href="RostersAndGroups.html">IVLE::RostersAndGroups</a>
+  
+  
+  
+    <li><a class="include" href="Announcement.html">IVLE::Announcement</a>
+  
+  
+  
+    <li><a class="include" href="Forum.html">IVLE::Forum</a>
+  
+  
+  
+    <li><a class="include" href="Webcast.html">IVLE::Webcast</a>
+  
+  
+  
+    <li><a class="include" href="Poll.html">IVLE::Poll</a>
+  
+  
+  
+    <li><a class="include" href="Workbin.html">IVLE::Workbin</a>
+  
+  
+  
+    <li><a class="include" href="Gradebook.html">IVLE::Gradebook</a>
+  
+  
+  
+    <li><a class="include" href="LibraryEReserves.html">IVLE::LibraryEReserves</a>
+  
+  
+  
+    <li><a class="include" href="MyOrganizer.html">IVLE::MyOrganizer</a>
+  
+  
+  
+    <li><a class="include" href="Community.html">IVLE::Community</a>
+  
+  
+  
+    <li><a class="include" href="OpenWebcastLectures.html">IVLE::OpenWebcastLectures</a>
+  
+  
+  
+    <li><a class="include" href="StudentEvents.html">IVLE::StudentEvents</a>
+  
+  
+  
+    <li><a class="include" href="IVLENews.html">IVLE::IVLENews</a>
+  
+  
+  
+    <li><a class="include" href="Timetable.html">IVLE::Timetable</a>
+  
+  
+  
+    <li><a class="include" href="DeltaDatasets.html">IVLE::DeltaDatasets</a>
+  
+  
+  
+    <li><a class="include" href="Profile.html">IVLE::Profile</a>
+  
+  
+  </ul>
+</nav>
+
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-api">#api</a>
+    
+    <li><a href="#method-i-api_post">#api_post</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../IVLE.html">IVLE</a>
+  
+    <li><a href="../IVLE/API.html">IVLE::API</a>
+  
+    <li><a href="../IVLE/Announcement.html">IVLE::Announcement</a>
+  
+    <li><a href="../IVLE/Community.html">IVLE::Community</a>
+  
+    <li><a href="../IVLE/Consultation.html">IVLE::Consultation</a>
+  
+    <li><a href="../IVLE/DeltaDatasets.html">IVLE::DeltaDatasets</a>
+  
+    <li><a href="../IVLE/Forum.html">IVLE::Forum</a>
+  
+    <li><a href="../IVLE/Gradebook.html">IVLE::Gradebook</a>
+  
+    <li><a href="../IVLE/IVLEModule.html">IVLE::IVLEModule</a>
+  
+    <li><a href="../IVLE/IVLENews.html">IVLE::IVLENews</a>
+  
+    <li><a href="../IVLE/LibraryEReserves.html">IVLE::LibraryEReserves</a>
+  
+    <li><a href="../IVLE/Login.html">IVLE::Login</a>
+  
+    <li><a href="../IVLE/MyOrganizer.html">IVLE::MyOrganizer</a>
+  
+    <li><a href="../IVLE/OpenWebcastLectures.html">IVLE::OpenWebcastLectures</a>
+  
+    <li><a href="../IVLE/Poll.html">IVLE::Poll</a>
+  
+    <li><a href="../IVLE/Profile.html">IVLE::Profile</a>
+  
+    <li><a href="../IVLE/RostersAndGroups.html">IVLE::RostersAndGroups</a>
+  
+    <li><a href="../IVLE/StudentEvents.html">IVLE::StudentEvents</a>
+  
+    <li><a href="../IVLE/Timetable.html">IVLE::Timetable</a>
+  
+    <li><a href="../IVLE/Webcast.html">IVLE::Webcast</a>
+  
+    <li><a href="../IVLE/Workbin.html">IVLE::Workbin</a>
+  
+    <li><a href="../Fixtures.html">Fixtures</a>
+  
+    <li><a href="../Fixtures/IVLE.html">Fixtures::IVLE</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class IVLE::API</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-api_key" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">api_key</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-password" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">password</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-username" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">username</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(api_key, username, password)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/IVLE.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">api_key</span>, <span class="ruby-identifier">username</span>, <span class="ruby-identifier">password</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">api_key</span>  = <span class="ruby-identifier">api_key</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">username</span> = <span class="ruby-identifier">username</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">password</span> = <span class="ruby-identifier">password</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-api" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">api</span><span
+            class="method-args">(method, params={}, verb=:get, add_auth=true)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>I don't trust the <a href="API.html">API</a> documentation so this is now
+public. Call this yourself if my implementation fails.</p>
+          
+
+          
+          <div class="method-source-code" id="api-source">
+            <pre><span class="ruby-comment"># File lib/IVLE.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">api</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">params</span>={}, <span class="ruby-identifier">verb</span>=<span class="ruby-value">:get</span>, <span class="ruby-identifier">add_auth</span>=<span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">params</span> = <span class="ruby-identifier">add_auth</span>(<span class="ruby-identifier">params</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">add_auth</span>
+  <span class="ruby-identifier">resp</span> = <span class="ruby-identifier">client</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">verb</span>, <span class="ruby-node">&quot;api/Lapi.svc/#{method}&quot;</span>, <span class="ruby-identifier">params</span>)
+  <span class="ruby-identifier">format_response</span>(<span class="ruby-identifier">resp</span>.<span class="ruby-identifier">body</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- api-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- api-method -->
+
+    
+      <div id="method-i-api_post" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">api_post</span><span
+            class="method-args">(method, params={})</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="api_post-source">
+            <pre><span class="ruby-comment"># File lib/IVLE.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">api_post</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">params</span>={})
+  <span class="ruby-identifier">api</span>(<span class="ruby-identifier">method</span>, <span class="ruby-identifier">params</span>, <span class="ruby-value">:post</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- api_post-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- api_post-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

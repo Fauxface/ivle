@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>module IVLE::Community - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/IVLE/api/community.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-communities">#communities</a>
+    
+    <li><a href="#method-i-community">#community</a>
+    
+    <li><a href="#method-i-community_add_member">#community_add_member</a>
+    
+    <li><a href="#method-i-community_announcements">#community_announcements</a>
+    
+    <li><a href="#method-i-community_categories">#community_categories</a>
+    
+    <li><a href="#method-i-community_create">#community_create</a>
+    
+    <li><a href="#method-i-community_create_comment">#community_create_comment</a>
+    
+    <li><a href="#method-i-community_create_task">#community_create_task</a>
+    
+    <li><a href="#method-i-community_delete_comment">#community_delete_comment</a>
+    
+    <li><a href="#method-i-community_delete_member">#community_delete_member</a>
+    
+    <li><a href="#method-i-community_delete_task">#community_delete_task</a>
+    
+    <li><a href="#method-i-community_forum_add_log_by_post">#community_forum_add_log_by_post</a>
+    
+    <li><a href="#method-i-community_forum_headings">#community_forum_headings</a>
+    
+    <li><a href="#method-i-community_forum_new_topic">#community_forum_new_topic</a>
+    
+    <li><a href="#method-i-community_forum_posts">#community_forum_posts</a>
+    
+    <li><a href="#method-i-community_forum_reply_post">#community_forum_reply_post</a>
+    
+    <li><a href="#method-i-community_get_all_comments">#community_get_all_comments</a>
+    
+    <li><a href="#method-i-community_get_all_tasks">#community_get_all_tasks</a>
+    
+    <li><a href="#method-i-community_get_comment">#community_get_comment</a>
+    
+    <li><a href="#method-i-community_get_sub_task">#community_get_sub_task</a>
+    
+    <li><a href="#method-i-community_get_task">#community_get_task</a>
+    
+    <li><a href="#method-i-community_join">#community_join</a>
+    
+    <li><a href="#method-i-community_members">#community_members</a>
+    
+    <li><a href="#method-i-community_quit">#community_quit</a>
+    
+    <li><a href="#method-i-community_search">#community_search</a>
+    
+    <li><a href="#method-i-community_tags">#community_tags</a>
+    
+    <li><a href="#method-i-community_update">#community_update</a>
+    
+    <li><a href="#method-i-community_update_comment">#community_update_comment</a>
+    
+    <li><a href="#method-i-community_update_member">#community_update_member</a>
+    
+    <li><a href="#method-i-community_update_task">#community_update_task</a>
+    
+    <li><a href="#method-i-community_weblinks">#community_weblinks</a>
+    
+    <li><a href="#method-i-community_workbin_files">#community_workbin_files</a>
+    
+    <li><a href="#method-i-community_workbin_folders">#community_workbin_folders</a>
+    
+    <li><a href="#method-i-download_file">#download_file</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../IVLE.html">IVLE</a>
+  
+    <li><a href="../IVLE/API.html">IVLE::API</a>
+  
+    <li><a href="../IVLE/Announcement.html">IVLE::Announcement</a>
+  
+    <li><a href="../IVLE/Community.html">IVLE::Community</a>
+  
+    <li><a href="../IVLE/Consultation.html">IVLE::Consultation</a>
+  
+    <li><a href="../IVLE/DeltaDatasets.html">IVLE::DeltaDatasets</a>
+  
+    <li><a href="../IVLE/Forum.html">IVLE::Forum</a>
+  
+    <li><a href="../IVLE/Gradebook.html">IVLE::Gradebook</a>
+  
+    <li><a href="../IVLE/IVLEModule.html">IVLE::IVLEModule</a>
+  
+    <li><a href="../IVLE/IVLENews.html">IVLE::IVLENews</a>
+  
+    <li><a href="../IVLE/LibraryEReserves.html">IVLE::LibraryEReserves</a>
+  
+    <li><a href="../IVLE/Login.html">IVLE::Login</a>
+  
+    <li><a href="../IVLE/MyOrganizer.html">IVLE::MyOrganizer</a>
+  
+    <li><a href="../IVLE/OpenWebcastLectures.html">IVLE::OpenWebcastLectures</a>
+  
+    <li><a href="../IVLE/Poll.html">IVLE::Poll</a>
+  
+    <li><a href="../IVLE/Profile.html">IVLE::Profile</a>
+  
+    <li><a href="../IVLE/RostersAndGroups.html">IVLE::RostersAndGroups</a>
+  
+    <li><a href="../IVLE/StudentEvents.html">IVLE::StudentEvents</a>
+  
+    <li><a href="../IVLE/Timetable.html">IVLE::Timetable</a>
+  
+    <li><a href="../IVLE/Webcast.html">IVLE::Webcast</a>
+  
+    <li><a href="../IVLE/Workbin.html">IVLE::Workbin</a>
+  
+    <li><a href="../Fixtures.html">Fixtures</a>
+  
+    <li><a href="../Fixtures/IVLE.html">Fixtures::IVLE</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module IVLE::Community</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-communities" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">communities</span><span
+            class="method-args">(duration=0)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="communities-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 3</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">communities</span>(<span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Communities'</span>, <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- communities-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- communities-method -->
+
+    
+      <div id="method-i-community" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community</span><span
+            class="method-args">(com_id, duration=0)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community</span>(<span class="ruby-identifier">com_id</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Community'</span>, <span class="ruby-identifier">comid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">com_id</span>, <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community-method -->
+
+    
+      <div id="method-i-community_add_member" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_add_member</span><span
+            class="method-args">(com_id, member_id, member_type)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_add_member-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_add_member</span>(<span class="ruby-identifier">com_id</span>, <span class="ruby-identifier">member_id</span>, <span class="ruby-identifier">member_type</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'Community_AddMember_JSON'</span>, <span class="ruby-identifier">comid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">com_id</span>, <span class="ruby-identifier">memberid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">member_id</span>, <span class="ruby-identifier">membertype</span><span class="ruby-operator">:</span> <span class="ruby-identifier">member_type</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_add_member-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_add_member-method -->
+
+    
+      <div id="method-i-community_announcements" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_announcements</span><span
+            class="method-args">(com_id, duration=0)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_announcements-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_announcements</span>(<span class="ruby-identifier">com_id</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'CommunityAnnouncements'</span>, <span class="ruby-identifier">comid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">com_id</span>, <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_announcements-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_announcements-method -->
+
+    
+      <div id="method-i-community_categories" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_categories</span><span
+            class="method-args">(active_only=false)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_categories-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_categories</span>(<span class="ruby-identifier">active_only</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-comment"># Just look at this snake_CamelCase consistency!</span>
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'CommunityCategories'</span>, <span class="ruby-identifier">activeonly</span><span class="ruby-operator">:</span> <span class="ruby-identifier">active_only</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_categories-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_categories-method -->
+
+    
+      <div id="method-i-community_create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_create</span><span
+            class="method-args">(title, description, access_type, default_forum, default_workbin, category_id, tags)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_create-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 83</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_create</span>(<span class="ruby-identifier">title</span>, <span class="ruby-identifier">description</span>, <span class="ruby-identifier">access_type</span>, <span class="ruby-identifier">default_forum</span>, <span class="ruby-identifier">default_workbin</span>, <span class="ruby-identifier">category_id</span>, <span class="ruby-identifier">tags</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'Community_Create_JSON'</span>, {
+    <span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-identifier">title</span>,
+    <span class="ruby-identifier">accesstype</span><span class="ruby-operator">:</span> <span class="ruby-identifier">access_type</span>,
+    <span class="ruby-identifier">defaultforum</span><span class="ruby-operator">:</span> <span class="ruby-identifier">default_forum</span>,
+    <span class="ruby-identifier">defaultworkbin</span><span class="ruby-operator">:</span> <span class="ruby-identifier">default_workbin</span>,
+    <span class="ruby-identifier">categoryid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">category_id</span>,
+    <span class="ruby-identifier">tags</span><span class="ruby-operator">:</span> <span class="ruby-identifier">tags</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_create-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_create-method -->
+
+    
+      <div id="method-i-community_create_comment" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_create_comment</span><span
+            class="method-args">(task_id, comment)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_create_comment-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_create_comment</span>(<span class="ruby-identifier">task_id</span>, <span class="ruby-identifier">comment</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'Community_CreateComment_JSON'</span>, <span class="ruby-identifier">taskid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">task_id</span>, <span class="ruby-identifier">comment</span><span class="ruby-operator">:</span> <span class="ruby-identifier">comment</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_create_comment-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_create_comment-method -->
+
+    
+      <div id="method-i-community_create_task" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_create_task</span><span
+            class="method-args">(com_id, task_name, task_description, parent_task_id, task_status, task_priority, task_due_date)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_create_task-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 126</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_create_task</span>(<span class="ruby-identifier">com_id</span>, <span class="ruby-identifier">task_name</span>, <span class="ruby-identifier">task_description</span>, <span class="ruby-identifier">parent_task_id</span>, <span class="ruby-identifier">task_status</span>, <span class="ruby-identifier">task_priority</span>, <span class="ruby-identifier">task_due_date</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'Community_CreateTask_JSON'</span>, {
+    <span class="ruby-identifier">comid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">com_id</span>,
+    <span class="ruby-identifier">taskname</span><span class="ruby-operator">:</span> <span class="ruby-identifier">task_name</span>,
+    <span class="ruby-identifier">taskdescription</span><span class="ruby-operator">:</span> <span class="ruby-identifier">task_description</span>,
+    <span class="ruby-identifier">parenttaskid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">parent_task_id</span>,
+    <span class="ruby-identifier">taskstatus</span><span class="ruby-operator">:</span> <span class="ruby-identifier">task_status</span>,
+    <span class="ruby-identifier">taskpriority</span><span class="ruby-operator">:</span> <span class="ruby-identifier">task_priority</span>,
+    <span class="ruby-identifier">taskduedate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">task_due_date</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_create_task-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_create_task-method -->
+
+    
+      <div id="method-i-community_delete_comment" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_delete_comment</span><span
+            class="method-args">(comment_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_delete_comment-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_delete_comment</span>(<span class="ruby-identifier">comment_id</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'Community_DeleteComment_JSON'</span>, <span class="ruby-identifier">commentid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">comment_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_delete_comment-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_delete_comment-method -->
+
+    
+      <div id="method-i-community_delete_member" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_delete_member</span><span
+            class="method-args">(com_id, member_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_delete_member-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_delete_member</span>(<span class="ruby-identifier">com_id</span>, <span class="ruby-identifier">member_id</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'Community_DeleteMember_JSON'</span>, <span class="ruby-identifier">comid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">com_id</span>, <span class="ruby-identifier">memberid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">member_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_delete_member-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_delete_member-method -->
+
+    
+      <div id="method-i-community_delete_task" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_delete_task</span><span
+            class="method-args">(task_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_delete_task-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_delete_task</span>(<span class="ruby-identifier">task_id</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'Community_DeleteTask_JSON'</span>, <span class="ruby-identifier">taskid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">task_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_delete_task-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_delete_task-method -->
+
+    
+      <div id="method-i-community_forum_add_log_by_post" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_forum_add_log_by_post</span><span
+            class="method-args">(post_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_forum_add_log_by_post-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_forum_add_log_by_post</span>(<span class="ruby-identifier">post_id</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'CommunityForum_AddLogByPost_JSON'</span>, <span class="ruby-identifier">postid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">post_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_forum_add_log_by_post-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_forum_add_log_by_post-method -->
+
+    
+      <div id="method-i-community_forum_headings" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_forum_headings</span><span
+            class="method-args">(com_id, including_posts=true, duration=0)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_forum_headings-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_forum_headings</span>(<span class="ruby-identifier">com_id</span>, <span class="ruby-identifier">including_posts</span>=<span class="ruby-keyword">true</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'CommunityForumHeadings'</span>, <span class="ruby-identifier">comid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">com_id</span>, <span class="ruby-identifier">includingposts</span><span class="ruby-operator">:</span> <span class="ruby-identifier">including_posts</span>, <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_forum_headings-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_forum_headings-method -->
+
+    
+      <div id="method-i-community_forum_new_topic" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_forum_new_topic</span><span
+            class="method-args">(heading_id, title, message)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_forum_new_topic-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_forum_new_topic</span>(<span class="ruby-identifier">heading_id</span>, <span class="ruby-identifier">title</span>, <span class="ruby-identifier">message</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'CommunityForum_NewTopic_JSON'</span>, <span class="ruby-identifier">headingid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">heading_id</span>, <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-identifier">message</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_forum_new_topic-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_forum_new_topic-method -->
+
+    
+      <div id="method-i-community_forum_posts" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_forum_posts</span><span
+            class="method-args">(heading_id, duration=0)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_forum_posts-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_forum_posts</span>(<span class="ruby-identifier">heading_id</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'CommunityForumPosts'</span>, <span class="ruby-identifier">headingid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">heading_id</span>, <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_forum_posts-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_forum_posts-method -->
+
+    
+      <div id="method-i-community_forum_reply_post" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_forum_reply_post</span><span
+            class="method-args">(post_id, title, message)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_forum_reply_post-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_forum_reply_post</span>(<span class="ruby-identifier">post_id</span>, <span class="ruby-identifier">title</span>, <span class="ruby-identifier">message</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'CommunityForum_ReplyPost_JSON'</span>, <span class="ruby-identifier">postid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">post_id</span>, <span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-identifier">title</span>, <span class="ruby-identifier">message</span><span class="ruby-operator">:</span> <span class="ruby-identifier">message</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_forum_reply_post-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_forum_reply_post-method -->
+
+    
+      <div id="method-i-community_get_all_comments" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_get_all_comments</span><span
+            class="method-args">(task_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_get_all_comments-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 170</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_get_all_comments</span>(<span class="ruby-identifier">task_id</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Community_GetAllComments'</span>, <span class="ruby-identifier">taskid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">task_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_get_all_comments-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_get_all_comments-method -->
+
+    
+      <div id="method-i-community_get_all_tasks" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_get_all_tasks</span><span
+            class="method-args">(com_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_get_all_tasks-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_get_all_tasks</span>(<span class="ruby-identifier">com_id</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Community_GetAllTasks'</span>, <span class="ruby-identifier">comid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">com_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_get_all_tasks-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_get_all_tasks-method -->
+
+    
+      <div id="method-i-community_get_comment" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_get_comment</span><span
+            class="method-args">(comment_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_get_comment-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 166</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_get_comment</span>(<span class="ruby-identifier">comment_id</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Community_GetComment'</span>, <span class="ruby-identifier">commentid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">comment_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_get_comment-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_get_comment-method -->
+
+    
+      <div id="method-i-community_get_sub_task" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_get_sub_task</span><span
+            class="method-args">(task_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_get_sub_task-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 122</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_get_sub_task</span>(<span class="ruby-identifier">task_id</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Community_GetSubTask'</span>, <span class="ruby-identifier">taskid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">task_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_get_sub_task-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_get_sub_task-method -->
+
+    
+      <div id="method-i-community_get_task" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_get_task</span><span
+            class="method-args">(task_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_get_task-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 114</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_get_task</span>(<span class="ruby-identifier">task_id</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Community_GetTask'</span>, <span class="ruby-identifier">taskid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">task_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_get_task-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_get_task-method -->
+
+    
+      <div id="method-i-community_join" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_join</span><span
+            class="method-args">(com_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_join-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_join</span>(<span class="ruby-identifier">com_id</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'Community_Join_JSON'</span>, <span class="ruby-identifier">comid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">com_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_join-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_join-method -->
+
+    
+      <div id="method-i-community_members" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_members</span><span
+            class="method-args">(com_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_members-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_members</span>(<span class="ruby-identifier">com_id</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'CommunityMembers'</span>, <span class="ruby-identifier">comid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">com_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_members-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_members-method -->
+
+    
+      <div id="method-i-community_quit" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_quit</span><span
+            class="method-args">(com_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_quit-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_quit</span>(<span class="ruby-identifier">com_id</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'Community_Quit_JSON'</span>, <span class="ruby-identifier">comid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">com_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_quit-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_quit-method -->
+
+    
+      <div id="method-i-community_search" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_search</span><span
+            class="method-args">(search_type, keyword, active_only=false, title_only=false)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_search-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_search</span>(<span class="ruby-identifier">search_type</span>, <span class="ruby-identifier">keyword</span>, <span class="ruby-identifier">active_only</span>=<span class="ruby-keyword">false</span>, <span class="ruby-identifier">title_only</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Community_Search'</span>, <span class="ruby-identifier">searchtype</span><span class="ruby-operator">:</span> <span class="ruby-identifier">search_type</span>, <span class="ruby-identifier">keyword</span><span class="ruby-operator">:</span> <span class="ruby-identifier">keyword</span>, <span class="ruby-identifier">activeonly</span><span class="ruby-operator">:</span> <span class="ruby-identifier">active_only</span>, <span class="ruby-identifier">titleonly</span><span class="ruby-operator">:</span> <span class="ruby-identifier">title_only</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_search-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_search-method -->
+
+    
+      <div id="method-i-community_tags" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_tags</span><span
+            class="method-args">(active_only=false)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_tags-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_tags</span>(<span class="ruby-identifier">active_only</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'CommunityTags'</span>, <span class="ruby-identifier">activeonly</span><span class="ruby-operator">:</span> <span class="ruby-identifier">active_only</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_tags-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_tags-method -->
+
+    
+      <div id="method-i-community_update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_update</span><span
+            class="method-args">(com_id, title, description, access_type, default_forum, default_workbin, category_id, tags, display_members_to, opening_date, expiry_date)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_update-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 94</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_update</span>(<span class="ruby-identifier">com_id</span>, <span class="ruby-identifier">title</span>, <span class="ruby-identifier">description</span>, <span class="ruby-identifier">access_type</span>, <span class="ruby-identifier">default_forum</span>, <span class="ruby-identifier">default_workbin</span>, <span class="ruby-identifier">category_id</span>, <span class="ruby-identifier">tags</span>, <span class="ruby-identifier">display_members_to</span>, <span class="ruby-identifier">opening_date</span>, <span class="ruby-identifier">expiry_date</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'Community_Update_JSON'</span>, {
+    <span class="ruby-identifier">comid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">com_id</span>,
+    <span class="ruby-identifier">title</span><span class="ruby-operator">:</span> <span class="ruby-identifier">title</span>,
+    <span class="ruby-identifier">description</span><span class="ruby-operator">:</span> <span class="ruby-identifier">description</span>,
+    <span class="ruby-identifier">accesstype</span><span class="ruby-operator">:</span> <span class="ruby-identifier">access_type</span>,
+    <span class="ruby-identifier">defaultforum</span><span class="ruby-operator">:</span> <span class="ruby-identifier">default_forum</span>,
+    <span class="ruby-identifier">defaultworkbin</span><span class="ruby-operator">:</span> <span class="ruby-identifier">default_workbin</span>,
+    <span class="ruby-identifier">categoryid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">category_id</span>,
+    <span class="ruby-identifier">tags</span><span class="ruby-operator">:</span> <span class="ruby-identifier">tags</span>,
+    <span class="ruby-identifier">displaymembersto</span><span class="ruby-operator">:</span> <span class="ruby-identifier">display_members_to</span>,
+    <span class="ruby-identifier">openingdate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">opening_date</span>,
+    <span class="ruby-identifier">expirydate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">expiry_date</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_update-method -->
+
+    
+      <div id="method-i-community_update_comment" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_update_comment</span><span
+            class="method-args">(comment_id, comment)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_update_comment-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 158</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_update_comment</span>(<span class="ruby-identifier">comment_id</span>, <span class="ruby-identifier">comment</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'Commmunity_UpdateComment_JSON'</span>, <span class="ruby-identifier">commentid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">comment_id</span>, <span class="ruby-identifier">comment</span><span class="ruby-operator">:</span> <span class="ruby-identifier">comment</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_update_comment-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_update_comment-method -->
+
+    
+      <div id="method-i-community_update_member" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_update_member</span><span
+            class="method-args">(com_id, member_id, member_type)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_update_member-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 79</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_update_member</span>(<span class="ruby-identifier">com_id</span>, <span class="ruby-identifier">member_id</span>, <span class="ruby-identifier">member_type</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'Community_UpdateMember_JSON'</span>, <span class="ruby-identifier">comid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">com_id</span>, <span class="ruby-identifier">memberid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">member_id</span>, <span class="ruby-identifier">membertype</span><span class="ruby-operator">:</span> <span class="ruby-identifier">member_type</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_update_member-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_update_member-method -->
+
+    
+      <div id="method-i-community_update_task" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_update_task</span><span
+            class="method-args">(task_id, task_name, task_description, parent_task_id, task_status, task_priority, task_due_date)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_update_task-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_update_task</span>(<span class="ruby-identifier">task_id</span>, <span class="ruby-identifier">task_name</span>, <span class="ruby-identifier">task_description</span>, <span class="ruby-identifier">parent_task_id</span>, <span class="ruby-identifier">task_status</span>, <span class="ruby-identifier">task_priority</span>, <span class="ruby-identifier">task_due_date</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'Community_UpdateTask_JSON'</span>, {
+    <span class="ruby-identifier">taskid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">com_id</span>,
+    <span class="ruby-identifier">taskname</span><span class="ruby-operator">:</span> <span class="ruby-identifier">task_name</span>,
+    <span class="ruby-identifier">taskdescription</span><span class="ruby-operator">:</span> <span class="ruby-identifier">task_description</span>,
+    <span class="ruby-identifier">parenttaskid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">parent_task_id</span>,
+    <span class="ruby-identifier">taskstatus</span><span class="ruby-operator">:</span> <span class="ruby-identifier">task_status</span>,
+    <span class="ruby-identifier">taskpriority</span><span class="ruby-operator">:</span> <span class="ruby-identifier">task_priority</span>,
+    <span class="ruby-identifier">taskduedate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">task_due_date</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_update_task-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_update_task-method -->
+
+    
+      <div id="method-i-community_weblinks" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_weblinks</span><span
+            class="method-args">(com_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_weblinks-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_weblinks</span>(<span class="ruby-identifier">com_id</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'CommunityWeblinks'</span>, <span class="ruby-identifier">comid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">com_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_weblinks-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_weblinks-method -->
+
+    
+      <div id="method-i-community_workbin_files" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_workbin_files</span><span
+            class="method-args">(folder_id, duration=0)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_workbin_files-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_workbin_files</span>(<span class="ruby-identifier">folder_id</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'CommunityWorkbinFiles'</span>, <span class="ruby-identifier">folderid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">folder_id</span>, <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_workbin_files-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_workbin_files-method -->
+
+    
+      <div id="method-i-community_workbin_folders" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">community_workbin_folders</span><span
+            class="method-args">(com_id, including_files=true, duration=0)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="community_workbin_folders-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">community_workbin_folders</span>(<span class="ruby-identifier">com_id</span>, <span class="ruby-identifier">including_files</span>=<span class="ruby-keyword">true</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'CommunityWorkbinFolders'</span>, <span class="ruby-identifier">comid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">com_id</span>, <span class="ruby-identifier">includingfiles</span><span class="ruby-operator">:</span> <span class="ruby-identifier">including_files</span>, <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- community_workbin_folders-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- community_workbin_folders-method -->
+
+    
+      <div id="method-i-download_file" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">download_file</span><span
+            class="method-args">(id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="download_file-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/community.rb, line 110</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">download_file</span>(<span class="ruby-identifier">id</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'downloadfile'</span>, <span class="ruby-identifier">id</span><span class="ruby-operator">:</span> <span class="ruby-identifier">id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- download_file-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- download_file-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
