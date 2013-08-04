@@ -59,10 +59,17 @@ module IVLE
 
     attr_accessor :api_key, :username, :password
 
-    def initialize(api_key, username, password)
-      self.api_key  = api_key
-      self.username = username
-      self.password = password
+    def initialize(*args)
+      self.api_key  = args[0]
+
+      if args.size == 2
+        @access_token = args[1]
+      elsif args.size == 3
+        self.username = args[1]
+        self.password = args[2]
+      else
+        raise ArgumentError "Expected 2 or 3 arguments, got #{args.size}"
+      end
     end
 
     # I don't trust the API documentation so this is now public.

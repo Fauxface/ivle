@@ -1,3 +1,2 @@
-:lapi_key: 'ovQ0GMpWiKZw9xwcmFBJv'
 :verify_ssl: false
-:faraday_log: true
+:faraday_log: false
