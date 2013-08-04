@@ -35,6 +35,9 @@ Or install it yourself as:
     ivle.module_weblinks '4215f7f9-794d-4045-8d2d-0f8d2db2444f'
     => {"Results":[{"ID":"4215f7f9-794d-4045-8d2d-0f8d2db2444f","URL":"http://byob.berkeley.edu/", ... }
 
+### API Key
+Log in to IVLE, then access this URL: [http://ivle.nus.edu.sg/LAPI/default.aspx](http://ivle.nus.edu.sg/LAPI/default.aspx)
+
 ## Contributing
 
 1. Fork it
@@ -46,4 +49,4 @@ Or install it yourself as:
 ### Tests
 There is a simple RSpec in `spec`.
 
-`bundle exec rspec spec/api/api_spec.rb`
+To run it: `bundle exec rspec spec/api/api_spec.rb`
