@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>module IVLE::IVLEModule - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/IVLE/api/module.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-module">#module</a>
+    
+    <li><a href="#method-i-module_information">#module_information</a>
+    
+    <li><a href="#method-i-module_lecturers">#module_lecturers</a>
+    
+    <li><a href="#method-i-module_reading">#module_reading</a>
+    
+    <li><a href="#method-i-module_reading_formatted">#module_reading_formatted</a>
+    
+    <li><a href="#method-i-module_reading_unformatted">#module_reading_unformatted</a>
+    
+    <li><a href="#method-i-module_weblinks">#module_weblinks</a>
+    
+    <li><a href="#method-i-modules">#modules</a>
+    
+    <li><a href="#method-i-modules_search">#modules_search</a>
+    
+    <li><a href="#method-i-modules_staff">#modules_staff</a>
+    
+    <li><a href="#method-i-modules_student">#modules_student</a>
+    
+    <li><a href="#method-i-modules_taken">#modules_taken</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../IVLE.html">IVLE</a>
+  
+    <li><a href="../IVLE/API.html">IVLE::API</a>
+  
+    <li><a href="../IVLE/Announcement.html">IVLE::Announcement</a>
+  
+    <li><a href="../IVLE/Community.html">IVLE::Community</a>
+  
+    <li><a href="../IVLE/Consultation.html">IVLE::Consultation</a>
+  
+    <li><a href="../IVLE/DeltaDatasets.html">IVLE::DeltaDatasets</a>
+  
+    <li><a href="../IVLE/Forum.html">IVLE::Forum</a>
+  
+    <li><a href="../IVLE/Gradebook.html">IVLE::Gradebook</a>
+  
+    <li><a href="../IVLE/IVLEModule.html">IVLE::IVLEModule</a>
+  
+    <li><a href="../IVLE/IVLENews.html">IVLE::IVLENews</a>
+  
+    <li><a href="../IVLE/LibraryEReserves.html">IVLE::LibraryEReserves</a>
+  
+    <li><a href="../IVLE/Login.html">IVLE::Login</a>
+  
+    <li><a href="../IVLE/MyOrganizer.html">IVLE::MyOrganizer</a>
+  
+    <li><a href="../IVLE/OpenWebcastLectures.html">IVLE::OpenWebcastLectures</a>
+  
+    <li><a href="../IVLE/Poll.html">IVLE::Poll</a>
+  
+    <li><a href="../IVLE/Profile.html">IVLE::Profile</a>
+  
+    <li><a href="../IVLE/RostersAndGroups.html">IVLE::RostersAndGroups</a>
+  
+    <li><a href="../IVLE/StudentEvents.html">IVLE::StudentEvents</a>
+  
+    <li><a href="../IVLE/Timetable.html">IVLE::Timetable</a>
+  
+    <li><a href="../IVLE/Webcast.html">IVLE::Webcast</a>
+  
+    <li><a href="../IVLE/Workbin.html">IVLE::Workbin</a>
+  
+    <li><a href="../Fixtures.html">Fixtures</a>
+  
+    <li><a href="../Fixtures/IVLE.html">Fixtures::IVLE</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module IVLE::IVLEModule</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-module" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">module</span><span
+            class="method-args">(course_id, title_only=false, duration=0, include_all_info=true)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="module-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/module.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">module</span>(<span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">title_only</span>=<span class="ruby-keyword">false</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">include_all_info</span>=<span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Module'</span>, <span class="ruby-identifier">courseid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">titleonly</span><span class="ruby-operator">:</span> <span class="ruby-identifier">title_only</span>, <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>, <span class="ruby-identifier">includeallinfo</span><span class="ruby-operator">:</span> <span class="ruby-identifier">include_all_info</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- module-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- module-method -->
+
+    
+      <div id="method-i-module_information" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">module_information</span><span
+            class="method-args">(course_id, duration=0)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="module_information-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/module.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">module_information</span>(<span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Module_Information'</span>, <span class="ruby-identifier">courseid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- module_information-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- module_information-method -->
+
+    
+      <div id="method-i-module_lecturers" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">module_lecturers</span><span
+            class="method-args">(course_id, duration=0)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="module_lecturers-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/module.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">module_lecturers</span>(<span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Module_Lecturers'</span>, <span class="ruby-identifier">courseid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- module_lecturers-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- module_lecturers-method -->
+
+    
+      <div id="method-i-module_reading" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">module_reading</span><span
+            class="method-args">(course_id, duration=0)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="module_reading-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/module.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">module_reading</span>(<span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Module_Reading'</span>, <span class="ruby-identifier">courseid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- module_reading-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- module_reading-method -->
+
+    
+      <div id="method-i-module_reading_formatted" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">module_reading_formatted</span><span
+            class="method-args">(course_id, duration=0)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="module_reading_formatted-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/module.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">module_reading_formatted</span>(<span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Module_ReadingFormatted'</span>, <span class="ruby-identifier">courseid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- module_reading_formatted-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- module_reading_formatted-method -->
+
+    
+      <div id="method-i-module_reading_unformatted" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">module_reading_unformatted</span><span
+            class="method-args">(course_id, duration=0)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="module_reading_unformatted-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/module.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">module_reading_unformatted</span>(<span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Module_ReadingUnformatted'</span>, <span class="ruby-identifier">courseid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">course_id</span>, <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- module_reading_unformatted-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- module_reading_unformatted-method -->
+
+    
+      <div id="method-i-module_weblinks" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">module_weblinks</span><span
+            class="method-args">(course_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="module_weblinks-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/module.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">module_weblinks</span>(<span class="ruby-identifier">course_id</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Module_Weblinks'</span>, <span class="ruby-identifier">courseid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">course_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- module_weblinks-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- module_weblinks-method -->
+
+    
+      <div id="method-i-modules" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">modules</span><span
+            class="method-args">(duration=0, include_all_info=true)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="modules-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/module.rb, line 3</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">modules</span>(<span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">include_all_info</span>=<span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Modules'</span>, <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>, <span class="ruby-identifier">includeallinfo</span><span class="ruby-operator">:</span> <span class="ruby-identifier">include_all_info</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- modules-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- modules-method -->
+
+    
+      <div id="method-i-modules_search" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">modules_search</span><span
+            class="method-args">(search_parameters={}, duration=0, include_all_info=true)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="modules_search-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/module.rb, line 19</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">modules_search</span>(<span class="ruby-identifier">search_parameters</span>={}, <span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">include_all_info</span>=<span class="ruby-keyword">true</span>)
+  <span class="ruby-comment"># Verbatim from API docs: AuthToken, ModuleCode, ModuleTitle, LecturerName, Department, Semester, AcadYear, ModNameExact,</span>
+  <span class="ruby-comment"># LecNameExact, tag are optional fields. But at least one must be supplied.</span>
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Modules_Search'</span>, <span class="ruby-identifier">search_parameters</span>.<span class="ruby-identifier">merge</span>({ <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>, <span class="ruby-identifier">includeallinfo</span><span class="ruby-operator">:</span> <span class="ruby-identifier">include_all_info</span> })
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- modules_search-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- modules_search-method -->
+
+    
+      <div id="method-i-modules_staff" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">modules_staff</span><span
+            class="method-args">(duration=0, include_all_info=true)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="modules_staff-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/module.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">modules_staff</span>(<span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">include_all_info</span>=<span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Modules_Staff'</span>, <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>, <span class="ruby-identifier">includeallinfo</span><span class="ruby-operator">:</span> <span class="ruby-identifier">include_all_info</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- modules_staff-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- modules_staff-method -->
+
+    
+      <div id="method-i-modules_student" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">modules_student</span><span
+            class="method-args">(duration=0, include_all_info=true)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="modules_student-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/module.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">modules_student</span>(<span class="ruby-identifier">duration</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">include_all_info</span>=<span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Modules_Student'</span>, <span class="ruby-identifier">duration</span><span class="ruby-operator">:</span> <span class="ruby-identifier">duration</span>, <span class="ruby-identifier">includeallinfo</span><span class="ruby-operator">:</span> <span class="ruby-identifier">include_all_info</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- modules_student-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- modules_student-method -->
+
+    
+      <div id="method-i-modules_taken" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">modules_taken</span><span
+            class="method-args">(student_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="modules_taken-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/module.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">modules_taken</span>(<span class="ruby-identifier">student_id</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Modules_Taken'</span>, <span class="ruby-identifier">studentid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">student_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- modules_taken-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- modules_taken-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

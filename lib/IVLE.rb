@@ -4,13 +4,25 @@ require 'mechanize'
 require 'faraday'
 require 'faraday_middleware'
 
-require "IVLE/api/module"
-require "IVLE/api/login"
-require "IVLE/api/consultation"
-require "IVLE/api/rosters_and_groups"
-require "IVLE/api/announcement"
-require "IVLE/api/forum"
-require "IVLE/api/webcast"
+require 'IVLE/api/module'
+require 'IVLE/api/login'
+require 'IVLE/api/consultation'
+require 'IVLE/api/rosters_and_groups'
+require 'IVLE/api/announcement'
+require 'IVLE/api/forum'
+require 'IVLE/api/webcast'
+require 'IVLE/api/poll'
+require 'IVLE/api/workbin'
+require 'IVLE/api/gradebook'
+require 'IVLE/api/library_ereserves'
+require 'IVLE/api/my_organizer'
+require 'IVLE/api/community'
+require 'IVLE/api/open_webcast_lectures'
+require 'IVLE/api/student_events'
+require 'IVLE/api/ivle_news'
+require 'IVLE/api/timetable'
+require 'IVLE/api/delta_datasets'
+require 'IVLE/api/profile'
 
 module IVLE
   class << self
@@ -24,6 +36,7 @@ module IVLE
   end
 
   class API
+    # Some are plural -- blame the docs
     include IVLE::Login
     include IVLE::IVLEModule
     include IVLE::Consultation
@@ -31,6 +44,18 @@ module IVLE
     include IVLE::Announcement
     include IVLE::Forum
     include IVLE::Webcast
+    include IVLE::Poll
+    include IVLE::Workbin
+    include IVLE::Gradebook
+    include IVLE::LibraryEReserves
+    include IVLE::MyOrganizer
+    include IVLE::Community
+    include IVLE::OpenWebcastLectures
+    include IVLE::StudentEvents
+    include IVLE::IVLENews
+    include IVLE::Timetable
+    include IVLE::DeltaDatasets
+    include IVLE::Profile
 
     attr_accessor :api_key, :username, :password
 
@@ -40,10 +65,11 @@ module IVLE
       self.password = password
     end
 
-    # I don't trust the API docs so this is now public.
+    # I don't trust the API documentation so this is now public.
     # Call this yourself if my implementation fails.
-    def api(method, params={}, verb=:get)
-      resp = client.send(verb, "api/#{method}", add_auth(params))
+    def api(method, params={}, verb=:get, add_auth=true)
+      params = add_auth(params) if add_auth
+      resp = client.send(verb, "api/Lapi.svc/#{method}", params)
       format_response(resp.body)
     end
 

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>module IVLE::MyOrganizer - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="module">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/IVLE/api/my_organizer.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-code_table_week_types">#code_table_week_types</a>
+    
+    <li><a href="#method-i-my_organizer_acad_semester_info">#my_organizer_acad_semester_info</a>
+    
+    <li><a href="#method-i-my_organizer_add_personal_event">#my_organizer_add_personal_event</a>
+    
+    <li><a href="#method-i-my_organizer_delete_personal_event">#my_organizer_delete_personal_event</a>
+    
+    <li><a href="#method-i-my_organizer_events">#my_organizer_events</a>
+    
+    <li><a href="#method-i-my_organizer_ivle">#my_organizer_ivle</a>
+    
+    <li><a href="#method-i-my_organizer_personal">#my_organizer_personal</a>
+    
+    <li><a href="#method-i-my_organizer_special_days">#my_organizer_special_days</a>
+    
+    <li><a href="#method-i-my_organizer_update_personal_event">#my_organizer_update_personal_event</a>
+    
+    <li><a href="#method-i-timetable_student">#timetable_student</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../IVLE.html">IVLE</a>
+  
+    <li><a href="../IVLE/API.html">IVLE::API</a>
+  
+    <li><a href="../IVLE/Announcement.html">IVLE::Announcement</a>
+  
+    <li><a href="../IVLE/Community.html">IVLE::Community</a>
+  
+    <li><a href="../IVLE/Consultation.html">IVLE::Consultation</a>
+  
+    <li><a href="../IVLE/DeltaDatasets.html">IVLE::DeltaDatasets</a>
+  
+    <li><a href="../IVLE/Forum.html">IVLE::Forum</a>
+  
+    <li><a href="../IVLE/Gradebook.html">IVLE::Gradebook</a>
+  
+    <li><a href="../IVLE/IVLEModule.html">IVLE::IVLEModule</a>
+  
+    <li><a href="../IVLE/IVLENews.html">IVLE::IVLENews</a>
+  
+    <li><a href="../IVLE/LibraryEReserves.html">IVLE::LibraryEReserves</a>
+  
+    <li><a href="../IVLE/Login.html">IVLE::Login</a>
+  
+    <li><a href="../IVLE/MyOrganizer.html">IVLE::MyOrganizer</a>
+  
+    <li><a href="../IVLE/OpenWebcastLectures.html">IVLE::OpenWebcastLectures</a>
+  
+    <li><a href="../IVLE/Poll.html">IVLE::Poll</a>
+  
+    <li><a href="../IVLE/Profile.html">IVLE::Profile</a>
+  
+    <li><a href="../IVLE/RostersAndGroups.html">IVLE::RostersAndGroups</a>
+  
+    <li><a href="../IVLE/StudentEvents.html">IVLE::StudentEvents</a>
+  
+    <li><a href="../IVLE/Timetable.html">IVLE::Timetable</a>
+  
+    <li><a href="../IVLE/Webcast.html">IVLE::Webcast</a>
+  
+    <li><a href="../IVLE/Workbin.html">IVLE::Workbin</a>
+  
+    <li><a href="../Fixtures.html">Fixtures</a>
+  
+    <li><a href="../Fixtures/IVLE.html">Fixtures::IVLE</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="module">module IVLE::MyOrganizer</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-code_table_week_types" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">code_table_week_types</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="code_table_week_types-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/my_organizer.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">code_table_week_types</span>
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'CodeTable_WeekTypes'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- code_table_week_types-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- code_table_week_types-method -->
+
+    
+      <div id="method-i-my_organizer_acad_semester_info" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">my_organizer_acad_semester_info</span><span
+            class="method-args">(acad_year, semester)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="my_organizer_acad_semester_info-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/my_organizer.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">my_organizer_acad_semester_info</span>(<span class="ruby-identifier">acad_year</span>, <span class="ruby-identifier">semester</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'MyOrganizer_AcadSemesterInfo'</span>, <span class="ruby-identifier">acadyear</span><span class="ruby-operator">:</span> <span class="ruby-identifier">acad_year</span>, <span class="ruby-identifier">semester</span><span class="ruby-operator">:</span> <span class="ruby-identifier">semester</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- my_organizer_acad_semester_info-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- my_organizer_acad_semester_info-method -->
+
+    
+      <div id="method-i-my_organizer_add_personal_event" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">my_organizer_add_personal_event</span><span
+            class="method-args">(event_title, venue, event_date_time, description, recur_type, str_days, recur_till_date)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="my_organizer_add_personal_event-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/my_organizer.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">my_organizer_add_personal_event</span>(<span class="ruby-identifier">event_title</span>, <span class="ruby-identifier">venue</span>, <span class="ruby-identifier">event_date_time</span>, <span class="ruby-identifier">description</span>, <span class="ruby-identifier">recur_type</span>, <span class="ruby-identifier">str_days</span>, <span class="ruby-identifier">recur_till_date</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'MyOrganizer_AddPersonalEvent_JSON'</span>, {
+    <span class="ruby-identifier">eventtitle</span><span class="ruby-operator">:</span> <span class="ruby-identifier">event_title</span>,
+    <span class="ruby-identifier">venue</span><span class="ruby-operator">:</span> <span class="ruby-identifier">venue</span>,
+    <span class="ruby-identifier">eventdatetime</span><span class="ruby-operator">:</span> <span class="ruby-identifier">event_date_time</span>,
+    <span class="ruby-identifier">description</span><span class="ruby-operator">:</span> <span class="ruby-identifier">description</span>,
+    <span class="ruby-identifier">recurtype</span><span class="ruby-operator">:</span> <span class="ruby-identifier">recur_type</span>,
+    <span class="ruby-identifier">recurtilldate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">recur_till_date</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- my_organizer_add_personal_event-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- my_organizer_add_personal_event-method -->
+
+    
+      <div id="method-i-my_organizer_delete_personal_event" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">my_organizer_delete_personal_event</span><span
+            class="method-args">(event_id, delete_all_recurrence=true)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="my_organizer_delete_personal_event-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/my_organizer.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">my_organizer_delete_personal_event</span>(<span class="ruby-identifier">event_id</span>, <span class="ruby-identifier">delete_all_recurrence</span>=<span class="ruby-keyword">true</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'MyOrganizer_DeletePersonalEvent_JSON'</span>, <span class="ruby-identifier">eventid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">event_id</span>, <span class="ruby-identifier">deleteallrecurrence</span><span class="ruby-operator">:</span> <span class="ruby-identifier">delete_all_recurrence</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- my_organizer_delete_personal_event-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- my_organizer_delete_personal_event-method -->
+
+    
+      <div id="method-i-my_organizer_events" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">my_organizer_events</span><span
+            class="method-args">(start_date=nil, end_date=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="my_organizer_events-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/my_organizer.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">my_organizer_events</span>(<span class="ruby-identifier">start_date</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">end_date</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'MyOrganizer_Events'</span>, <span class="ruby-identifier">startdate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">start_date</span>, <span class="ruby-identifier">enddate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">end_date</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- my_organizer_events-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- my_organizer_events-method -->
+
+    
+      <div id="method-i-my_organizer_ivle" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">my_organizer_ivle</span><span
+            class="method-args">(start_date=nil, end_date=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="my_organizer_ivle-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/my_organizer.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">my_organizer_ivle</span>(<span class="ruby-identifier">start_date</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">end_date</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'MyOrganizer_IVLE'</span>, <span class="ruby-identifier">startdate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">start_date</span>, <span class="ruby-identifier">enddate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">end_date</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- my_organizer_ivle-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- my_organizer_ivle-method -->
+
+    
+      <div id="method-i-my_organizer_personal" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">my_organizer_personal</span><span
+            class="method-args">(start_date=nil, end_date=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="my_organizer_personal-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/my_organizer.rb, line 3</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">my_organizer_personal</span>(<span class="ruby-identifier">start_date</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">end_date</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'MyOrganizer_Personal'</span>, <span class="ruby-identifier">startdate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">start_date</span>, <span class="ruby-identifier">enddate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">end_date</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- my_organizer_personal-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- my_organizer_personal-method -->
+
+    
+      <div id="method-i-my_organizer_special_days" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">my_organizer_special_days</span><span
+            class="method-args">(start_date=nil, end_date=nil)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="my_organizer_special_days-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/my_organizer.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">my_organizer_special_days</span>(<span class="ruby-identifier">start_date</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">end_date</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'MyOrganizer_SpecialDays'</span>, <span class="ruby-identifier">startdate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">start_date</span>, <span class="ruby-identifier">enddate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">end_date</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- my_organizer_special_days-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- my_organizer_special_days-method -->
+
+    
+      <div id="method-i-my_organizer_update_personal_event" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">my_organizer_update_personal_event</span><span
+            class="method-args">(event_id, event_title, venue, event_date_time, description, recur_type, weekly_recur_every, str_days, recur_from_date, recur_till_date, update_recurrence_event)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="my_organizer_update_personal_event-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/my_organizer.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">my_organizer_update_personal_event</span>(<span class="ruby-identifier">event_id</span>, <span class="ruby-identifier">event_title</span>, <span class="ruby-identifier">venue</span>, <span class="ruby-identifier">event_date_time</span>, <span class="ruby-identifier">description</span>, <span class="ruby-identifier">recur_type</span>, <span class="ruby-identifier">weekly_recur_every</span>, <span class="ruby-identifier">str_days</span>, <span class="ruby-identifier">recur_from_date</span>, <span class="ruby-identifier">recur_till_date</span>, <span class="ruby-identifier">update_recurrence_event</span>)
+  <span class="ruby-identifier">api_post</span> <span class="ruby-string">'MyOrganizer_UpdatePersonalEvent_JSON'</span>, {
+    <span class="ruby-identifier">eventid</span><span class="ruby-operator">:</span> <span class="ruby-identifier">event_id</span>,
+    <span class="ruby-identifier">eventtitle</span><span class="ruby-operator">:</span> <span class="ruby-identifier">event_title</span>,
+    <span class="ruby-identifier">venue</span><span class="ruby-operator">:</span> <span class="ruby-identifier">venue</span>,
+    <span class="ruby-identifier">eventdatetime</span><span class="ruby-operator">:</span> <span class="ruby-identifier">event_date_time</span>,
+    <span class="ruby-identifier">description</span><span class="ruby-operator">:</span> <span class="ruby-identifier">description</span>,
+    <span class="ruby-identifier">recurtype</span><span class="ruby-operator">:</span> <span class="ruby-identifier">recur_type</span>,
+    <span class="ruby-identifier">weeklyrecurevery</span><span class="ruby-operator">:</span> <span class="ruby-identifier">weekly_recur_every</span>,
+    <span class="ruby-identifier">strdays</span><span class="ruby-operator">:</span> <span class="ruby-identifier">str_days</span>,
+    <span class="ruby-identifier">recurfromdate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">recur_from_date</span>,
+    <span class="ruby-identifier">recurtilldate</span><span class="ruby-operator">:</span> <span class="ruby-identifier">recur_till_date</span>,
+    <span class="ruby-identifier">updaterecurrenceevent</span><span class="ruby-operator">:</span> <span class="ruby-identifier">update_recurrence_event</span>
+  }
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- my_organizer_update_personal_event-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- my_organizer_update_personal_event-method -->
+
+    
+      <div id="method-i-timetable_student" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">timetable_student</span><span
+            class="method-args">(acad_year, semester)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="timetable_student-source">
+            <pre><span class="ruby-comment"># File lib/IVLE/api/my_organizer.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">timetable_student</span>(<span class="ruby-identifier">acad_year</span>, <span class="ruby-identifier">semester</span>)
+  <span class="ruby-identifier">api</span> <span class="ruby-string">'Timetable_Student'</span>, <span class="ruby-identifier">acadyear</span><span class="ruby-operator">:</span> <span class="ruby-identifier">acad_year</span>, <span class="ruby-identifier">semester</span><span class="ruby-operator">:</span> <span class="ruby-identifier">semester</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- timetable_student-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- timetable_student-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
