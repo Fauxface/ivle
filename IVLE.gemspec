@@ -7,9 +7,10 @@ Gem::Specification.new do |s|
   s.version     = IVLE::VERSION
   s.authors     = ["Ng Guoyou"]
   s.email       = ["fauxface+github@gmail.com"]
-  s.homepage    = "https://github.com/Fauxface/ivle"
+  s.homepage    = "https://github.com/gyng/ivle"
   s.summary     = %q{Basic Ruby gem wrapper for NUS IVLE LAPI interface.}
   s.description = %q{Basic Ruby gem wrapper for NUS IVLE LAPI interface. All methods are implemented (but not tested).}
+  s.license     = 'MIT'
 
   s.rubyforge_project = "IVLE"
 
