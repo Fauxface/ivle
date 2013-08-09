@@ -1,9 +1,9 @@
 # IVLE
-#### version 0.0.1 &beta;
+#### version 0.0.2 &beta;
 Basic Ruby gem wrapper for NUS IVLE LAPI interface. All methods are implemented (but not tested).
 
 * [IVLE LAPI documentation](http://wiki.nus.edu.sg/display/ivlelapi/Home)
-* A skeleton gem documentation is available in `doc`, or [here](http://fauxface.github.io/ivle/).
+* A skeleton gem documentation is available in `doc`, or [here](http://gyng.github.io/ivle/).
 
 This gem is in beta and is not guaranteed to work 100%. If you encounter problems, submit an issue (preferably with the bugfix) and I'll get on it.
 
